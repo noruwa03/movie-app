@@ -30,7 +30,6 @@ const useMovie = defineStore("movie", {
         );
         this.trendingMovieList = response.data.results;
         this.loading = false;
-        console.log(response.data);
       } catch (error: string | any) {
         console.log(error.message);
       }
@@ -43,7 +42,6 @@ const useMovie = defineStore("movie", {
         );
         this.popularMovieList = response.data.results;
         this.loading = false;
-        console.log(response.data);
       } catch (error: string | any) {
         console.log(error.message);
       }
@@ -56,7 +54,6 @@ const useMovie = defineStore("movie", {
         );
         this.topRatedMovieList = response.data.results;
         this.loading = false;
-        console.log(response.data);
       } catch (error: string | any) {
         console.log(error.message);
       }
@@ -79,7 +76,6 @@ const useMovie = defineStore("movie", {
         );
         this.genre = response.data.genres;
         this.loadingGenre = false;
-        console.log(response.data.genres);
       } catch (error: string | any) {
         console.log(error.message);
       }
@@ -94,7 +90,6 @@ const useMovie = defineStore("movie", {
         );
         this.movieList = response.data.results;
         this.loading = false;
-        console.log(response.data);
       } catch (error: string | any) {
         console.log(error.message);
       }
@@ -108,7 +103,6 @@ const useMovie = defineStore("movie", {
         );
         this.movieList = response.data.results;
         this.loading = false;
-        console.log(response.data);
       } catch (error: string | any) {
         console.log(error.message);
       }
@@ -122,7 +116,6 @@ const useMovie = defineStore("movie", {
         );
         this.searchedMovieList = response.data.results;
         this.loading = false;
-        console.log(this.searchedMovieList);
       } catch (error: string | any) {
         console.log(error.message);
       }
@@ -151,8 +144,6 @@ const useMovie = defineStore("movie", {
         this.similarMovieList = similarMovies.data.results;
         this.recommendationMovieList = recommendedMovies.data.results;
         this.loading = false;
-        console.log(this.movieDetail);
-        console.log(this.movieVideo);
       } catch (error: string | any) {
         console.log(error.message);
       }
