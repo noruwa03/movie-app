@@ -19,6 +19,7 @@ const next = () => {
 
 <template>
   <div>
+    <div v-if="data?.length === 0" class="mt-5 text-center">No movie found</div>
     <div
       ref="galleryRef"
       class="mt-4 flex snap-x snap-mandatory w-full mx:auto overflow-x-scroll lg:py-4 py-4 lg:space-x-6 space-x-4 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:'none'] [scrollbar-width:'none']"

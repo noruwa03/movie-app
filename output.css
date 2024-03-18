@@ -640,6 +640,22 @@ video {
   top: 50%;
 }
 
+.right-\[30\%\] {
+  right: 30%;
+}
+
+.-right-\[30\%\] {
+  right: -30%;
+}
+
+.-right-\[100\%\] {
+  right: -100%;
+}
+
+.-right-\[50\%\] {
+  right: -50%;
+}
+
 .z-10 {
   z-index: 10;
 }
@@ -1326,6 +1342,11 @@ video {
 .py-5 {
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
+}
+
+.py-6 {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
 }
 
 .pb-4 {

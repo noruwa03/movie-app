@@ -56,7 +56,7 @@ const sortBy = (data: any) => {
             </svg>
           </div>
           <ul
-            class="hidden absolute lg:top-9 lg:right-0 top-9 right-0 bg-white shadow-[0_0px_4px_-1.76px_rgba(0,0,0,0.3)] w-60 h-96 overflow-y-scroll rounded-xl before:absolute lg:before:left-[85%] lg:before:-translate-x-[10%] before:left-[10%] before:-translate-x-[10%] before:-translate-y-2 before:content-[''] before:bg-transparent before:h-4 before:w-4 before:-rotate-45 text-sm flex-col z-10"
+            class="hidden absolute lg:top-9 lg:right-0 top-9 -right-[50%] bg-white shadow-[0_0px_4px_-1.76px_rgba(0,0,0,0.3)] w-60 h-96 overflow-y-scroll rounded-xl text-sm flex-col z-10"
           >
             <li
               v-for="(item, _) in movie.genre"
@@ -89,7 +89,7 @@ const sortBy = (data: any) => {
             </svg>
           </div>
           <ul
-            class="hidden absolute lg:top-9 lg:right-0 top-9 right-0 bg-white dark:bg-[#0e1111] shadow-[0_0px_4px_-1.76px_rgba(0,0,0,0.3)] dark:border-[1px] dark:border-gray-50 w-60 rounded-xl before:absolute lg:before:left-[85%] lg:before:-translate-x-[10%] before:left-[10%] before:-translate-x-[10%] before:-translate-y-2 before:content-[''] before:bg-transparent before:h-4 before:w-4 before:-rotate-45 text-sm flex-col z-10"
+            class="hidden absolute lg:top-9 lg:right-0 top-9 right-0 bg-white shadow-[0_0px_4px_-1.76px_rgba(0,0,0,0.3)] w-60 rounded-xl text-sm flex-col z-10"
           >
             <li
               v-for="(item, _) in sortByOptions"

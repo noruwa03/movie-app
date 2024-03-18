@@ -89,7 +89,7 @@ const URL = `${import.meta.env.VITE_STREAM_PROVIDER}`;
           </p>
           <p>
             Runtime:
-            <span class="font-normal">{{ timeConvert(125) }}</span>
+            <span class="font-normal">{{ timeConvert(movie.movieDetail.runtime) }}</span>
           </p>
         </div>
       </div>

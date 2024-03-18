@@ -122,7 +122,6 @@ const useMovie = defineStore("movie", {
     },
     async getMovieDetails(payload: string | any) {
       try {
-        console.log(payload);
         const externalId = await axiosClient.get(
           `${payload}/external_ids?api_key=${import.meta.env.VITE_API_KEY}`
         );

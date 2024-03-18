@@ -9,10 +9,14 @@ const emit = defineEmits<{
 }>();
 
 const submit = () => {
-  window.history.replaceState(null, "", `?q=${movie.value.toLowerCase()}`);
+  window.history.replaceState(
+    null,
+    "",
+    `?q=${movie.value.toLowerCase().replace(/ /g, "+")}`
+  );
   movieStore.searchMovie(movie.value.toLowerCase());
   emit("close");
-  window.location.reload()
+  window.location.reload();
 };
 </script>
 

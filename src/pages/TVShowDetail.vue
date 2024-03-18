@@ -32,12 +32,6 @@ onMounted(() => {
         <template #default>
           <div class="lg:mt-20 mt-12">
             <h3 class="lg:text-2xl text-xl">Similar Movies</h3>
-            <div
-              v-if="movie.similarMovieList?.length === 0"
-              class="mt-5 text-center"
-            >
-              No movie found
-            </div>
             <ScrollCard :data="movie.similarMovieList" :movieType="movieType" />
           </div>
         </template>
@@ -54,12 +48,6 @@ onMounted(() => {
         <template #default>
           <div class="lg:mt-20 mt-12">
             <h3 class="lg:text-2xl text-xl mt-8">Recommendations</h3>
-            <div
-              v-if="movie.recommendationMovieList?.length === 0"
-              class="mt-5 text-center"
-            >
-              No movie found
-            </div>
             <ScrollCard
               :data="movie.recommendationMovieList"
               :movieType="movieType"

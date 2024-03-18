@@ -16,6 +16,11 @@ const movie = useMovie();
 
 onMounted(() => {
   movie.searchMovie(value);
+  window.history.replaceState(
+    null,
+    "",
+    `?q=${value.toLowerCase().replace(/ /g, "+")}`
+  );
 });
 
 const searchToggle = () => {
@@ -29,7 +34,7 @@ const searchToggle = () => {
       <Search @close="searchToggle" />
     </div>
     <div
-      class="lg:px-8 px-4 sticky top-0 lg:h-16 h-20 bg-white mb-6 flex sm:flex-row flex-col sm:items-center items-end sm:justify-between justify-start z-10"
+      class="lg:px-8 px-4 sticky top-0 lg:py-4 py-2 bg-white mb-6 flex sm:flex-row flex-col sm:items-center items-end sm:justify-between justify-start z-10"
     >
       <h3 class="lg:text-2xl text-xl lg:mb-0 mb-1 lowercase">
         Search results of '{{ value }}'
@@ -61,9 +66,6 @@ const searchToggle = () => {
       <Suspense>
         <template #default>
           <div>
-            <div v-if="movie.searchedMovieList?.length === 0">
-              No movie found
-            </div>
             <MovieCard :data="movie.searchedMovieList" />
           </div>
         </template>
