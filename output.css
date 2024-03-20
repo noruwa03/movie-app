@@ -588,6 +588,10 @@ video {
   right: -1.5rem;
 }
 
+.-right-\[50\%\] {
+  right: -50%;
+}
+
 .-top-6 {
   top: -1.5rem;
 }
@@ -638,22 +642,6 @@ video {
 
 .top-\[50\%\] {
   top: 50%;
-}
-
-.right-\[30\%\] {
-  right: 30%;
-}
-
-.-right-\[30\%\] {
-  right: -30%;
-}
-
-.-right-\[100\%\] {
-  right: -100%;
-}
-
-.-right-\[50\%\] {
-  right: -50%;
 }
 
 .z-10 {
@@ -825,10 +813,6 @@ video {
 
 .h-10 {
   height: 2.5rem;
-}
-
-.h-20 {
-  height: 5rem;
 }
 
 .h-6 {
@@ -1342,11 +1326,6 @@ video {
 .py-5 {
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
-}
-
-.py-6 {
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
 }
 
 .pb-4 {
@@ -2203,24 +2182,9 @@ svg:hover #lineTwo {
   position: absolute;
 }
 
-.before\:left-\[10\%\]::before {
-  content: var(--tw-content);
-  left: 10%;
-}
-
-.before\:h-4::before {
-  content: var(--tw-content);
-  height: 1rem;
-}
-
 .before\:h-\[2px\]::before {
   content: var(--tw-content);
   height: 2px;
-}
-
-.before\:w-4::before {
-  content: var(--tw-content);
-  width: 1rem;
 }
 
 .before\:w-8::before {
@@ -2228,21 +2192,9 @@ svg:hover #lineTwo {
   width: 2rem;
 }
 
-.before\:-translate-x-\[10\%\]::before {
-  content: var(--tw-content);
-  --tw-translate-x: -10%;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
 .before\:-translate-y-2::before {
   content: var(--tw-content);
   --tw-translate-y: -0.5rem;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.before\:-rotate-45::before {
-  content: var(--tw-content);
-  --tw-rotate: -45deg;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -2255,11 +2207,6 @@ svg:hover #lineTwo {
   content: var(--tw-content);
   --tw-bg-opacity: 1;
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
-}
-
-.before\:bg-transparent::before {
-  content: var(--tw-content);
-  background-color: transparent;
 }
 
 .before\:transition-all::before {
@@ -2469,20 +2416,6 @@ svg:hover #lineTwo {
   content: var(--tw-content);
 }
 
-:is(.dark .dark\:border-\[1px\]) {
-  border-width: 1px;
-}
-
-:is(.dark .dark\:border-gray-50) {
-  --tw-border-opacity: 1;
-  border-color: rgb(249 250 251 / var(--tw-border-opacity));
-}
-
-:is(.dark .dark\:bg-\[\#0e1111\]) {
-  --tw-bg-opacity: 1;
-  background-color: rgb(14 17 17 / var(--tw-bg-opacity));
-}
-
 :is(.dark .dark\:bg-gray-700) {
   --tw-bg-opacity: 1;
   background-color: rgb(55 65 81 / var(--tw-bg-opacity));
@@ -2585,10 +2518,6 @@ svg:hover #lineTwo {
 
   .lg\:hidden {
     display: none;
-  }
-
-  .lg\:h-16 {
-    height: 4rem;
   }
 
   .lg\:h-\[2\.2rem\] {
@@ -2737,17 +2666,6 @@ svg:hover #lineTwo {
   .lg\:placeholder\:text-base::placeholder {
     font-size: 1rem;
     line-height: 1.5rem;
-  }
-
-  .lg\:before\:left-\[85\%\]::before {
-    content: var(--tw-content);
-    left: 85%;
-  }
-
-  .lg\:before\:-translate-x-\[10\%\]::before {
-    content: var(--tw-content);
-    --tw-translate-x: -10%;
-    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   }
 }
 

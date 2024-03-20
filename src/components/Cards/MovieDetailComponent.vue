@@ -81,16 +81,28 @@ const URL = `${import.meta.env.VITE_STREAM_PROVIDER}`;
             Status:
             <span class="font-normal">{{ movie.movieDetail.status }}</span>
           </p>
-          <p>
+          
+          <div>
+            <p v-if="extract() === 'tv'">
+            Release Date:
+            <span class="font-normal">{{
+              movie.movieDetail.first_air_date
+            }}</span>
+          </p>
+          <p v-else>
             Release Date:
             <span class="font-normal">{{
               movie.movieDetail.release_date
             }}</span>
           </p>
-          <p>
+          </div>
+          <div>
+            <p v-if="extract() !== 'tv'">
             Runtime:
             <span class="font-normal">{{ timeConvert(movie.movieDetail.runtime) }}</span>
           </p>
+         
+          </div>
         </div>
       </div>
       <h1 class="lg:text-5xl sm:text-4xl text-3xl text-white mt-5 font-black">

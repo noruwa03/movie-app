@@ -1,5 +1,8 @@
 <script setup lang="ts">
 import { useRoute } from "vue-router";
+const emit = defineEmits<{
+  (e: "close"): void;
+}>();
 const currentRoute = useRoute();
 </script>
 
@@ -40,7 +43,7 @@ const currentRoute = useRoute();
         </div>
       </div>
       <ul class="-translate-y-8">
-        <li class="mt-0 px-2">
+        <li @click="emit('close')" class="mt-0 px-2">
           <RouterLink
             class="py-2 [&>*>svg]:hover:fill-black [&>*]:hover:text-black [&>*]:hover:font-semibold flex flex-row items-center justify-start space-x-2"
             to="/"
@@ -83,7 +86,7 @@ const currentRoute = useRoute();
           </RouterLink>
         </li>
 
-        <li class="my-1 px-2">
+        <li @click="emit('close')" class="my-1 px-2">
           <RouterLink
             class="py-2 [&>*>svg]:hover:stroke-black [&>*]:hover:text-black [&>*]:hover:font-semibold flex flex-row items-center justify-start space-x-2"
             to="/movies"
@@ -126,7 +129,7 @@ const currentRoute = useRoute();
           </RouterLink>
         </li>
 
-        <li class="my-1 px-2">
+        <li @click="emit('close')" class="my-1 px-2">
           <RouterLink
             class="py-2 [&>*>svg]:hover:fill-black [&>*]:hover:text-black [&>*]:hover:font-semibold flex flex-row items-center justify-start space-x-2"
             to="/tv"

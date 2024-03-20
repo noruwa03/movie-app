@@ -18,7 +18,7 @@ const menuHandler = () => {
     ref="navMenu"
       class="lg:sticky lg:top-0 lg:block hidden lg:w-[15%] fixed w-full z-30 h-screen"
     >
-      <NavBar />
+      <NavBar @close="menuHandler" />
     </div>
    <div class="lg:hidden block" ref="toggleMenu">
       <div
