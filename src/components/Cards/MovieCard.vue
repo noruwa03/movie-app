@@ -9,7 +9,7 @@ await new Promise((res) => setTimeout(res, 2000));
 
 <template>
   <div>
-    <div v-if="data?.length === 0">No movie found</div>
+    
     <div class="mt-4 grid grid-cols-8 gap-6">
       <div
         v-for="(item, index) in data"

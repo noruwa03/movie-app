@@ -38,7 +38,7 @@ const timeConvert = (n: any) => {
   // Round the remaining minutes to the nearest whole number
   const rminutes = Math.round(minutes);
   // Construct and return a string representing the conversion result
-  return `${rhours}h ${rminutes}m`;
+  return `${rhours || 0}h ${rminutes || 0}m`;
 };
 
 const extract = () => {
@@ -81,27 +81,28 @@ const URL = `${import.meta.env.VITE_STREAM_PROVIDER}`;
             Status:
             <span class="font-normal">{{ movie.movieDetail.status }}</span>
           </p>
-          
+
           <div>
             <p v-if="extract() === 'tv'">
-            Release Date:
-            <span class="font-normal">{{
-              movie.movieDetail.first_air_date
-            }}</span>
-          </p>
-          <p v-else>
-            Release Date:
-            <span class="font-normal">{{
-              movie.movieDetail.release_date
-            }}</span>
-          </p>
+              Release Date:
+              <span class="font-normal">{{
+                movie.movieDetail.first_air_date
+              }}</span>
+            </p>
+            <p v-else>
+              Release Date:
+              <span class="font-normal">{{
+                movie.movieDetail.release_date
+              }}</span>
+            </p>
           </div>
           <div>
             <p v-if="extract() !== 'tv'">
-            Runtime:
-            <span class="font-normal">{{ timeConvert(movie.movieDetail.runtime) }}</span>
-          </p>
-         
+              Runtime:
+              <span class="font-normal">{{
+                timeConvert(movie.movieDetail.runtime)
+              }}</span>
+            </p>
           </div>
         </div>
       </div>

@@ -19,7 +19,6 @@ const next = () => {
 
 <template>
   <div>
-    <div v-if="data?.length === 0" class="mt-5 text-center">No movie found</div>
     <div
       ref="galleryRef"
       class="mt-4 flex snap-x snap-mandatory w-full mx:auto overflow-x-scroll lg:py-4 py-4 lg:space-x-6 space-x-4 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:'none'] [scrollbar-width:'none']"
@@ -30,7 +29,7 @@ const next = () => {
         class="p-2 bg-white text-sm cursor-pointer shadow-[0_0px_4px_-1.76px_rgba(0,0,0,0.3)] rounded-2xl"
       >
         <a
-          :href="`/${movieType}/${item.id}`"
+          :href="`/${item.media_type ? item.media_type : movieType}/${item.id}`"
           class="snap-center w-[17.5rem] aspect-[2/2.8] break-words flex flex-col items-start justify-start gap-3"
         >
           <div className="w-full h-full relative">

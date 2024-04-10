@@ -9,7 +9,7 @@ const currentRoute = useRoute();
 <template>
   <div class="bg-white h-full">
     <nav class="h-full flex flex-col justify-between w-4/5 mx-auto">
-      <div>
+      <RouterLink to="/">
         <h1 class="mt-6 text-2xl font-bold text-center text-slate-500">Norw</h1>
         <div class="mt-4 grid place-content-center">
           <svg
@@ -41,7 +41,7 @@ const currentRoute = useRoute();
             </g>
           </svg>
         </div>
-      </div>
+      </RouterLink>
       <ul class="-translate-y-8">
         <li @click="emit('close')" class="mt-0 px-2">
           <RouterLink
@@ -179,7 +179,6 @@ const currentRoute = useRoute();
         class="py-2 px-2 [&>*>svg]:hover:fill-red-400 [&>*]:hover:text-red-400 [&>*]:hover:font-semibold flex flex-row items-center justify-start space-x-2"
       >
         <div class="flex flex-row items-center justify-start space-x-1">
-          <div></div>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="16"
